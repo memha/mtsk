@@ -1,6 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  // Konum butonunu turkuaz temaya geçir.
+  const locationButtonStyle = document.createElement("style");
+  locationButtonStyle.textContent = `
+    .header-actions .location-action,
+    .header-actions .btn-secondary {
+      background: linear-gradient(135deg, #0f766e, #14b8a6, #2dd4bf) !important;
+      box-shadow: 0 8px 22px rgba(20, 184, 166, .28) !important;
+      color: #fff !important;
+    }
+    .header-actions .location-action:hover,
+    .header-actions .btn-secondary:hover {
+      background: linear-gradient(135deg, #0d6b63, #0f9f91, #22cbb7) !important;
+      box-shadow: 0 14px 30px rgba(20, 184, 166, .36) !important;
+    }
+  `;
+  document.head.appendChild(locationButtonStyle);
+
   // Sections animate only as they enter the viewport; this avoids animating
   // content before a visitor can see it.
   const sections = document.querySelectorAll(".section");
