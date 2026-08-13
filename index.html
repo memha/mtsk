@@ -8,13 +8,11 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <div class="app-container">
-    <!-- Header -->
     <header class="header">
       <div class="container header-content">
         <div class="logo-section">
@@ -26,30 +24,21 @@
         </div>
 
         <div class="info-chips">
-          <a href="https://maps.app.goo.gl/9CkDeFp5u5hcrYTb7" target="_blank" rel="noopener noreferrer"
-            class="chip location-chip">
+          <a href="https://maps.app.goo.gl/9CkDeFp5u5hcrYTb7" target="_blank" rel="noopener noreferrer" class="chip location-chip">
             <span class="chip-icon">📍</span>
             <span>Konum: Şehit Muhammed Cihangir Çubukçu Anadolu Lisesi</span>
           </a>
-          <div class="chip time-chip">
-            <span class="chip-icon">✍️</span>
-            <span>İmza: 07:15</span>
-          </div>
-          <div class="chip meeting-chip">
-            <span class="chip-icon">📢</span>
-            <span>Toplantı: 07:30</span>
-          </div>
+          <div class="chip time-chip"><span class="chip-icon">✍️</span><span>İmza: 07:15</span></div>
+          <div class="chip meeting-chip"><span class="chip-icon">📢</span><span>Toplantı: 07:30</span></div>
         </div>
         <div class="header-actions" style="margin-top: 1.5rem;">
-          <a class="btn btn-secondary btn-large" href="https://maps.app.goo.gl/9CkDeFp5u5hcrYTb7" target="_blank"
-            rel="noopener noreferrer" style="width: 100%; justify-content: center;">
+          <a class="btn btn-secondary btn-large" href="https://maps.app.goo.gl/9CkDeFp5u5hcrYTb7" target="_blank" rel="noopener noreferrer" style="width: 100%; justify-content: center; background: linear-gradient(135deg, #14b8a6 0%, #0d9488 52%, #0f766e 100%); color: #ffffff; box-shadow: 0 10px 24px rgba(13, 148, 136, .30);">
             <svg class="location-action-icon" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Z" fill="currentColor"/>
-              <circle cx="12" cy="9" r="2.4" fill="#fff3dc"/>
+              <circle cx="12" cy="9" r="2.4" fill="#ffffff"/>
             </svg>
             <span>Konuma Git (Google Maps)</span>
-            <svg class="location-action-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <svg class="location-action-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
           </a>
@@ -57,234 +46,57 @@
       </div>
     </header>
 
-    <!-- Main Content -->
     <main class="container main-content" id="main-content">
-      <!-- Görevli Bilgilendirme -->
       <section class="section fade-in">
         <h2>📌 Görevli Bilgilendirme</h2>
         <p class="intro-text">Değerli Komisyon Üyeleri, MEBBİS üzerinden görevli kartınızı almayı unutmayınız.</p>
-
-        <div class="alert alert-warning">
-          <span class="alert-icon">⏰</span>
-          <div>
-            <div><strong>Zamanlama Önemlidir</strong></div>
-            <p>Sınav toplantı saati <strong>07:30</strong> olup, imza sirkösü için en geç saat <strong>07:15</strong>'te
-              okulda hazır bulunmanız gerekmektedir.</p>
-          </div>
-        </div>
-
-        <div class="alert alert-danger">
-          <span class="alert-icon">⚠️</span>
-          <div>
-            <div><strong>Geç Kalma Durumu</strong></div>
-            <p>Yönetmelik gereği geç gelen komisyon üyelerine sınav görevi verilememektedir.</p>
-          </div>
-        </div>
-
-
+        <div class="alert alert-warning"><span class="alert-icon">⏰</span><div><div><strong>Zamanlama Önemlidir</strong></div><p>Sınav toplantı saati <strong>07:30</strong> olup, imza sirkösü için en geç saat <strong>07:15</strong>'te okulda hazır bulunmanız gerekmektedir.</p></div></div>
+        <div class="alert alert-danger"><span class="alert-icon">⚠️</span><div><div><strong>Geç Kalma Durumu</strong></div><p>Yönetmelik gereği geç gelen komisyon üyelerine sınav görevi verilememektedir.</p></div></div>
       </section>
 
-      <!-- Sınav Animasyonları -->
       <section class="section fade-in">
         <h2>🎬 Sınav Animasyonları</h2>
         <p class="section-description">Sınav kurallarını hatırlamak için lütfen ilgili kategoriyi izleyiniz.</p>
-
         <div class="grid-2">
-          <a href="https://www.youtube.com/watch?v=DIfoEIs1bJ0" target="_blank" rel="noopener noreferrer"
-            class="video-card" data-video="DIfoEIs1bJ0">
-            <div class="thumbnail-wrapper">
-              <img src="https://img.youtube.com/vi/DIfoEIs1bJ0/maxresdefault.jpg" alt="Otomobil Sınavı" loading="lazy">
-              <div class="play-icon">
-                <svg viewBox="0 0 24 24" fill="white">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-            </div>
-            <div class="video-details">
-              <h4>Otomobil Sınavı</h4>
-              <span>🎥 Trafik Adam Animasyon</span>
-            </div>
-          </a>
-
-          <a href="https://www.youtube.com/watch?v=jmwhwNhbXaY" target="_blank" rel="noopener noreferrer"
-            class="video-card" data-video="jmwhwNhbXaY">
-            <div class="thumbnail-wrapper">
-              <img src="https://img.youtube.com/vi/jmwhwNhbXaY/maxresdefault.jpg" alt="Kamyon/Römork Sınavı"
-                loading="lazy">
-              <div class="play-icon">
-                <svg viewBox="0 0 24 24" fill="white">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-            </div>
-            <div class="video-details">
-              <h4>Kamyon/Römork Sınavı</h4>
-              <span>🎥 Trafik Adam Kamyon</span>
-            </div>
-          </a>
-
-          <a href="https://www.youtube.com/watch?v=l5TR6jCAc9U" target="_blank" rel="noopener noreferrer"
-            class="video-card" data-video="l5TR6jCAc9U">
-            <div class="thumbnail-wrapper">
-              <img src="https://img.youtube.com/vi/l5TR6jCAc9U/maxresdefault.jpg" alt="Motosiklet Sınavı"
-                loading="lazy">
-              <div class="play-icon">
-                <svg viewBox="0 0 24 24" fill="white">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-            </div>
-            <div class="video-details">
-              <h4>Motosiklet Sınavı</h4>
-              <span>🎥 Trafik Adam Animasyon</span>
-            </div>
-          </a>
-
-          <a href="https://www.youtube.com/watch?v=uQ-4gcrQBHQ" target="_blank" rel="noopener noreferrer"
-            class="video-card" data-video="uQ-4gcrQBHQ">
-            <div class="thumbnail-wrapper">
-              <img src="https://img.youtube.com/vi/uQ-4gcrQBHQ/maxresdefault.jpg" alt="Trafik Kazaları" loading="lazy">
-              <div class="play-icon">
-                <svg viewBox="0 0 24 24" fill="white">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-            </div>
-            <div class="video-details">
-              <h4>Trafik Kazaları</h4>
-              <span>🎥 Farkındalık Eğitimi</span>
-            </div>
-          </a>
-
-          <a href="https://www.youtube.com/watch?v=pmoFAxaCNxg" target="_blank" rel="noopener noreferrer"
-            class="video-card" data-video="pmoFAxaCNxg">
-            <div class="thumbnail-wrapper">
-              <img src="https://img.youtube.com/vi/pmoFAxaCNxg/maxresdefault.jpg" alt="Trafikte Aşırı Hız"
-                loading="lazy">
-              <div class="play-icon">
-                <svg viewBox="0 0 24 24" fill="white">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-            </div>
-            <div class="video-details">
-              <h4>Trafikte Aşırı Hız</h4>
-              <span>🎥 Farkındalık Eğitimi</span>
-            </div>
-          </a>
+          <a href="https://www.youtube.com/watch?v=DIfoEIs1bJ0" target="_blank" rel="noopener noreferrer" class="video-card" data-video="DIfoEIs1bJ0"><div class="thumbnail-wrapper"><img src="https://img.youtube.com/vi/DIfoEIs1bJ0/maxresdefault.jpg" alt="Otomobil Sınavı" loading="lazy"><div class="play-icon"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z" /></svg></div></div><div class="video-details"><h4>Otomobil Sınavı</h4><span>🎥 Trafik Adam Animasyon</span></div></a>
+          <a href="https://www.youtube.com/watch?v=jmwhwNhbXaY" target="_blank" rel="noopener noreferrer" class="video-card" data-video="jmwhwNhbXaY"><div class="thumbnail-wrapper"><img src="https://img.youtube.com/vi/jmwhwNhbXaY/maxresdefault.jpg" alt="Kamyon/Römork Sınavı" loading="lazy"><div class="play-icon"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z" /></svg></div></div><div class="video-details"><h4>Kamyon/Römork Sınavı</h4><span>🎥 Trafik Adam Kamyon</span></div></a>
+          <a href="https://www.youtube.com/watch?v=l5TR6jCAc9U" target="_blank" rel="noopener noreferrer" class="video-card" data-video="l5TR6jCAc9U"><div class="thumbnail-wrapper"><img src="https://img.youtube.com/vi/l5TR6jCAc9U/maxresdefault.jpg" alt="Motosiklet Sınavı" loading="lazy"><div class="play-icon"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z" /></svg></div></div><div class="video-details"><h4>Motosiklet Sınavı</h4><span>🎥 Trafik Adam Animasyon</span></div></a>
+          <a href="https://www.youtube.com/watch?v=uQ-4gcrQBHQ" target="_blank" rel="noopener noreferrer" class="video-card" data-video="uQ-4gcrQBHQ"><div class="thumbnail-wrapper"><img src="https://img.youtube.com/vi/uQ-4gcrQBHQ/maxresdefault.jpg" alt="Trafik Kazaları" loading="lazy"><div class="play-icon"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z" /></svg></div></div><div class="video-details"><h4>Trafik Kazaları</h4><span>🎥 Farkındalık Eğitimi</span></div></a>
+          <a href="https://www.youtube.com/watch?v=pmoFAxaCNxg" target="_blank" rel="noopener noreferrer" class="video-card" data-video="pmoFAxaCNxg"><div class="thumbnail-wrapper"><img src="https://img.youtube.com/vi/pmoFAxaCNxg/maxresdefault.jpg" alt="Trafikte Aşırı Hız" loading="lazy"><div class="play-icon"><svg viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z" /></svg></div></div><div class="video-details"><h4>Trafikte Aşırı Hız</h4><span>🎥 Farkındalık Eğitimi</span></div></a>
         </div>
       </section>
 
-      <!-- Önemli Dökümanlar -->
       <section class="section fade-in">
         <h2>📂 Önemli Dökümanlar</h2>
         <div class="grid-2">
-          <div class="action-card">
-            <div class="card-icon-wrapper">
-              <span class="card-icon">📊</span>
-            </div>
-            <h3>EK-4 Form</h3>
-            <p>Sınav görevlileri için gerekli form dökümanı</p>
-            <a href="https://docs.google.com/spreadsheets/d/137NyETIjxWdyQr7cg7-XehV-t2fVelcr/edit?usp=sharing&ouid=102687595642702363300&rtpof=true&sd=true"
-              target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-              📄 İncele
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </a>
-          </div>
-
-          <div class="action-card">
-            <div class="card-icon-wrapper">
-              <span class="card-icon">📝</span>
-            </div>
-            <h3>EK-3 Form</h3>
-            <p>Sınav görevlileri için gerekli form dökümanı</p>
-            <a href="https://docs.google.com/spreadsheets/d/1sqxn_C7hYB0pl3exOlRPHyGRlOiC68R-/edit?usp=sharing&ouid=102687595642702363300&rtpof=true&sd=true"
-              target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-              📄 İncele
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </a>
-          </div>
+          <div class="action-card"><div class="card-icon-wrapper"><span class="card-icon">📊</span></div><h3>EK-4 Form</h3><p>Sınav görevlileri için gerekli form dökümanı</p><a href="https://docs.google.com/spreadsheets/d/137NyETIjxWdyQr7cg7-XehV-t2fVelcr/edit?usp=sharing&ouid=102687595642702363300&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">📄 İncele<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg></a></div>
+          <div class="action-card"><div class="card-icon-wrapper"><span class="card-icon">📝</span></div><h3>EK-3 Form</h3><p>Sınav görevlileri için gerekli form dökümanı</p><a href="https://docs.google.com/spreadsheets/d/1sqxn_C7hYB0pl3exOlRPHyGRlOiC68R-/edit?usp=sharing&ouid=102687595642702363300&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">📄 İncele<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg></a></div>
         </div>
       </section>
 
-      <!-- MEB Ajanda & Tablet -->
       <section class="section fade-in">
         <h2>📱 MEB Ajanda & Tablet ve Mevzuat</h2>
-
-        <div class="alert alert-info">
-          <span class="alert-icon">ℹ️</span>
-          <div>
-            <a href="https://ookgm.meb.gov.tr/meb_iys_dosyalar/2025_01/13144439_mtsk.pdf" target="_blank"
-              rel="noopener noreferrer" class="link-underline">MTSK Yönetmeliği</a>'ni inceleyebilirsiniz.
-          </div>
-        </div>
-
-        <ul class="check-list">
-          <li><span>✅</span> MEBBİS şifrenizin güncel olduğunu kontrol ediniz.</li>
-          <li><span>✅</span> Sınav değerlendirmesi tablet üzerinden yapılacaktır.</li>
-          <li><span>✅</span> Giriş için MEB Ajanda kodu gerekmektedir.</li>
-        </ul>
-
+        <div class="alert alert-info"><span class="alert-icon">ℹ️</span><div><a href="https://ookgm.meb.gov.tr/meb_iys_dosyalar/2025_01/13144439_mtsk.pdf" target="_blank" rel="noopener noreferrer" class="link-underline">MTSK Yönetmeliği</a>'ni inceleyebilirsiniz.</div></div>
+        <ul class="check-list"><li><span>✅</span> MEBBİS şifrenizin güncel olduğunu kontrol ediniz.</li><li><span>✅</span> Sınav değerlendirmesi tablet üzerinden yapılacaktır.</li><li><span>✅</span> Giriş için MEB Ajanda kodu gerekmektedir.</li></ul>
         <h4 class="download-title">📲 MEB Ajanda Uygulamasını İndirin</h4>
-
         <div class="store-buttons-container">
-          <a href="https://play.google.com/store/apps/details?id=com.meb.mebanahtar" target="_blank"
-            rel="noopener noreferrer" class="store-btn">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path fill="#fff"
-                d="M4.5,4.3C4.1,4.7,3.9,5.3,3.9,6.1v25.9c0,0.8,0.2,1.4,0.6,1.8l0.1,0.1l14.4-14.4l-0.2-0.2L4.5,4.3z M19.9,18.5l-4.9-4.9l-4.9,4.9l4.9,4.9L19.9,18.5z M20.9,19.4l3.8,2.1c1.1,0.6,1.1,1.6,0,2.2l-1.6,0.9l-4.5-4.5L20.9,19.4z M18.6,13.6l4.5-4.5l1.6,0.9c1.1,0.6,1.1,1.6,0,2.2l-3.8,2.1L18.6,13.6z"
-                transform="scale(0.6) translate(2, -2)" />
-            </svg>
-            <div class="store-btn-content">
-              <span class="store-btn-subtitle">GET IT ON</span>
-              <span class="store-btn-title">Google Play</span>
-            </div>
-          </a>
-
-          <a href="https://apps.apple.com/tr/app/meb-ajanda/id1448478630" target="_blank" rel="noopener noreferrer"
-            class="store-btn">
-            <svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg">
-              <path fill="#fff"
-                d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 52.3-11.4 69.5-34.3z" />
-            </svg>
-            <div class="store-btn-content">
-              <span class="store-btn-subtitle">Download on the</span>
-              <span class="store-btn-title">App Store</span>
-            </div>
-          </a>
+          <a href="https://play.google.com/store/apps/details?id=com.meb.mebanahtar" target="_blank" rel="noopener noreferrer" class="store-btn"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M4.5,4.3C4.1,4.7,3.9,5.3,3.9,6.1v25.9c0,0.8,0.2,1.4,0.6,1.8l0.1,0.1l14.4-14.4l-0.2-0.2L4.5,4.3z M19.9,18.5l-4.9-4.9l-4.9,4.9l4.9,4.9L19.9,18.5z M20.9,19.4l3.8,2.1c1.1,0.6,1.1,1.6,0,2.2l-1.6,0.9l-4.5-4.5L20.9,19.4z M18.6,13.6l4.5-4.5l1.6,0.9c1.1,0.6,1.1,1.6,0,2.2l-3.8,2.1L18.6,13.6z" transform="scale(0.6) translate(2, -2)" /></svg><div class="store-btn-content"><span class="store-btn-subtitle">GET IT ON</span><span class="store-btn-title">Google Play</span></div></a>
+          <a href="https://apps.apple.com/tr/app/meb-ajanda/id1448478630" target="_blank" rel="noopener noreferrer" class="store-btn"><svg viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 52.3-11.4 69.5-34.3z" /></svg><div class="store-btn-content"><span class="store-btn-subtitle">Download on the</span><span class="store-btn-title">App Store</span></div></a>
         </div>
       </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <p>Haliliye İlçe Milli Eğitim Müdürlüğü</p>
-      <p>© 2025 Tüm hakları saklıdır</p>
-    </footer>
+    <footer class="footer"><p>Haliliye İlçe Milli Eğitim Müdürlüğü</p><p>© 2025 Tüm hakları saklıdır</p></footer>
   </div>
 
-  <div class="video-modal" id="video-modal" role="dialog" aria-modal="true" aria-hidden="true"
-    aria-label="YouTube video">
+  <div class="video-modal" id="video-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-label="YouTube video">
     <div class="video-modal-backdrop" data-close="true"></div>
     <div class="video-modal-content" role="document">
       <button class="video-modal-close" type="button" aria-label="Kapat">&times;</button>
-      <div class="video-frame">
-        <iframe id="video-frame" title="YouTube video oynatıcı" src="" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-          referrerpolicy="strict-origin-when-cross-origin">
-        </iframe>
-      </div>
+      <div class="video-frame"><iframe id="video-frame" title="YouTube video oynatıcı" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
     </div>
   </div>
 
   <script src="script.js"></script>
 </body>
-
 </html>
