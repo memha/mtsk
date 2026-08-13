@@ -1,0 +1,47 @@
+name: Apply turquoise location button
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    if: ${{ !contains(github.event.head_commit.message, 'Konum butonu turkuaz') }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Update location button
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+
+          path = Path('index.html')
+          text = path.read_text(encoding='utf-8')
+
+          pattern = r'(class="btn btn-secondary btn-large"[^>]*?style=")([^"]*)(")'
+          replacement = (
+              r'\1width: 100%; justify-content: center; '
+              r'background: linear-gradient(135deg, #0d9488 0%, #14b8a6 50%, #2dd4bf 100%); '
+              r'color: #ffffff; box-shadow: 0 10px 24px rgba(13, 148, 136, .35);\3'
+          )
+
+          updated, count = re.subn(pattern, replacement, text, count=1, flags=re.S)
+          if count != 1:
+              raise SystemExit('Konum butonunun inline stili bulunamadı.')
+
+          path.write_text(updated, encoding='utf-8')
+
+      - name: Commit changes
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index.html
+          git commit -m 'Konum butonu turkuaz' || exit 0
+          git push
