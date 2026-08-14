@@ -81,3 +81,20 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .info-chips .chip:hover { color:#fff !important; background:linear-gradient(135deg,#42135f 0%,#68136d 28%,#981866 52%,#c52268 72%,#e63b59 88%,#f24a55 100%) !important; box-shadow:inset 0 1px rgba(255,255,255,.18),0 18px 30px rgba(38,7,58,.36),0 0 28px rgba(213,35,91,.18) !important; }
 .location-action-icon { width:24px; height:24px; flex:0 0 auto; color:#ffd7e4; filter:drop-shadow(0 2px 2px rgba(48,9,62,.22)); }
 .location-action-arrow { margin-left:.2rem; }
+
+
+/* Location icon: reference-style red map pin */
+.location-pin-icon {
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 5px rgba(0,0,0,.28));
+}
+.location-action-icon {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 5px rgba(0,0,0,.24));
+}
