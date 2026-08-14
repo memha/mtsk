@@ -1,6 +1,59 @@
 document.addEventListener("DOMContentLoaded", () => {
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  // Konum ikonunu örnekteki kırmızı harita pini görünümüne getir.
+  const locationIconSvg = `
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" aria-hidden="true">
+      <rect width="256" height="256" fill="#000"/>
+      <path d="M128 18c-54.7 0-99 44.3-99 99 0 66.6 77.5 117.2 92.2 126.3a12.1 12.1 0 0 0 13.6 0C149.5 234.2 227 183.6 227 117c0-54.7-44.3-99-99-99Z" fill="#ed1111"/>
+      <circle cx="128" cy="117" r="53" fill="#000"/>
+      <circle cx="128" cy="117" r="38" fill="#ed1111"/>
+      <ellipse cx="128" cy="242" rx="67" ry="10" fill="none" stroke="#ed1111" stroke-width="7"/>
+      <ellipse cx="128" cy="242" rx="42" ry="6" fill="none" stroke="#ed1111" stroke-width="5"/>
+    </svg>`;
+  const locationIconUrl = `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(locationIconSvg)}`;
+
+  document.querySelectorAll(".location-chip .chip-icon").forEach((icon) => {
+    if (icon.textContent.trim() === "📍") {
+      const image = document.createElement("img");
+      image.src = locationIconUrl;
+      image.alt = "Konum";
+      image.className = "location-pin-icon";
+      image.setAttribute("aria-hidden", "true");
+      icon.replaceWith(image);
+    }
+  });
+
+  document.querySelectorAll(".location-action-icon").forEach((icon) => {
+    const image = document.createElement("img");
+    image.src = locationIconUrl;
+    image.alt = "Konum";
+    image.className = "location-action-icon";
+    image.setAttribute("aria-hidden", "true");
+    icon.replaceWith(image);
+  });
+
+  const locationIconStyle = document.createElement("style");
+  locationIconStyle.textContent = `
+    .location-pin-icon {
+      width: 30px;
+      height: 30px;
+      flex: 0 0 30px;
+      object-fit: contain;
+      border-radius: 4px;
+      filter: drop-shadow(0 3px 5px rgba(0,0,0,.28));
+    }
+    .location-action-icon {
+      width: 34px;
+      height: 34px;
+      flex: 0 0 34px;
+      object-fit: contain;
+      border-radius: 4px;
+      filter: drop-shadow(0 3px 5px rgba(0,0,0,.24));
+    }
+  `;
+  document.head.appendChild(locationIconStyle);
+
   // Konum butonunu turkuaz temaya geçir.
   const locationButtonStyle = document.createElement("style");
   locationButtonStyle.textContent = `
