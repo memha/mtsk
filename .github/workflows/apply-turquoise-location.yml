@@ -1,4 +1,4 @@
-name: Apply turquoise location button
+name: Apply location icon and button
 
 on:
   push:
@@ -10,38 +10,63 @@ permissions:
 
 jobs:
   apply:
-    if: ${{ !contains(github.event.head_commit.message, 'Konum butonu turkuaz') }}
+    if: ${{ !contains(github.event.head_commit.message, 'Konum ikonları örneğe göre') }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Update location button
+      - name: Apply location icon
         shell: python
         run: |
           from pathlib import Path
           import re
 
-          path = Path('index.html')
-          text = path.read_text(encoding='utf-8')
+          index = Path('index.html')
+          text = index.read_text(encoding='utf-8')
 
-          pattern = r'(class="btn btn-secondary btn-large"[^>]*?style=")([^"]*)(")'
-          replacement = (
-              r'\1width: 100%; justify-content: center; '
-              r'background: linear-gradient(135deg, #0d9488 0%, #14b8a6 50%, #2dd4bf 100%); '
-              r'color: #ffffff; box-shadow: 0 10px 24px rgba(13, 148, 136, .35);\3'
+          # Header location chip: replace the emoji with the supplied-style red pin icon.
+          text = text.replace(
+              '<span class="chip-icon">📍</span>',
+              '<img class="location-pin-icon" src="location-pin.svg" alt="Konum" aria-hidden="true">'
           )
 
-          updated, count = re.subn(pattern, replacement, text, count=1, flags=re.S)
-          if count != 1:
-              raise SystemExit('Konum butonunun inline stili bulunamadı.')
+          # Main location button: replace the existing inline SVG pin with the same icon.
+          text = re.sub(
+              r'<svg class="location-action-icon".*?</svg>',
+              '<img class="location-action-icon" src="location-pin.svg" alt="Konum" aria-hidden="true">',
+              text,
+              count=1,
+              flags=re.S
+          )
 
-          path.write_text(updated, encoding='utf-8')
+          index.write_text(text, encoding='utf-8')
+
+          css = Path('style.css')
+          styles = css.read_text(encoding='utf-8')
+          marker = '/* Location icon: reference-style red map pin */'
+          if marker not in styles:
+              styles += '''\n\n/* Location icon: reference-style red map pin */\n.location-pin-icon {\n  width: 30px;\n  height: 30px;\n  flex: 0 0 30px;\n  object-fit: contain;\n  filter: drop-shadow(0 3px 5px rgba(0,0,0,.28));\n}\n.location-action-icon {\n  width: 34px;\n  height: 34px;\n  flex: 0 0 34px;\n  object-fit: contain;\n  filter: drop-shadow(0 3px 5px rgba(0,0,0,.24));\n}\n'''
+              css.write_text(styles, encoding='utf-8')
+
+      - name: Create location icon
+        shell: bash
+        run: |
+          cat > location-pin.svg <<'EOF'
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Konum">
+            <rect width="256" height="256" fill="#000"/>
+            <path d="M128 18c-54.7 0-99 44.3-99 99 0 66.6 77.5 117.2 92.2 126.3a12.1 12.1 0 0 0 13.6 0C149.5 234.2 227 183.6 227 117c0-54.7-44.3-99-99-99Z" fill="#ed1111"/>
+            <circle cx="128" cy="117" r="53" fill="#000"/>
+            <circle cx="128" cy="117" r="38" fill="#ed1111"/>
+            <ellipse cx="128" cy="242" rx="67" ry="10" fill="none" stroke="#ed1111" stroke-width="7"/>
+            <ellipse cx="128" cy="242" rx="42" ry="6" fill="none" stroke="#ed1111" stroke-width="5"/>
+          </svg>
+          EOF
 
       - name: Commit changes
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add index.html
-          git commit -m 'Konum butonu turkuaz' || exit 0
+          git add index.html style.css location-pin.svg
+          git commit -m 'Konum ikonları örneğe göre' || exit 0
           git push
